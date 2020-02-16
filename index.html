@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="school.name">
+    {{school.name}}
+    <div>{{school.name}}</div>
+    <div>{{school.age}}</div>
+    <!-- computed 缓存 -->
+    <div>{{getName}}</div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+    </ul>
+  </div>
+  <!-- <script src="./node_modules/vue/dist/vue.js"></script> -->
+  <script src="mvvm.js"></script>
+  <script>
+    let vm = new Vue({
+      el:'#app',
+      data:{
+        school:{
+          name:'大连理工',
+          age: 70
+        }
+      },
+      // computed:{
+      //   getName(){
+      //     return this.school.name + 'dlut'
+      //   }
+      // }
+    })
+  </script>
+</body>
+</html>
